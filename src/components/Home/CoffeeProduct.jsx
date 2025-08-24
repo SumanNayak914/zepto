@@ -85,7 +85,7 @@ const CoffeeLoversSection = () => {
                 world of premium<br />
                 blends
               </h1>
-              <button className="bg-gradient-to-r from-amber-600 to-amber-800 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 w-fit mx-auto md:mx-0">
+              <button className="bg-gradient-to-r from-amber-600 to-amber-800 text-white px-6 py-3 rounded-full font-semibold  w-fit mx-auto md:mx-0">
                 View Collection →
               </button>
             </div>
@@ -111,7 +111,7 @@ const CoffeeLoversSection = () => {
                   {coffeeProducts.map((product) => (
                     <div
                       key={product.id}
-                      className="min-w-[200px] md:min-w-[230px] flex-shrink-0 bg-white rounded-xl p-3 md:p-4 shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-105 transition-all duration-300"
+                      className="min-w-[200px] md:min-w-[230px] flex-shrink-0 bg-white rounded-xl p-3 md:p-4 shadow-lg  "
                     >
                       <img
                         src={product.image}
@@ -153,7 +153,7 @@ const CoffeeLoversSection = () => {
                       {/* Add Button */}
                       <button
                         onClick={() => handleAddToCart(product)}
-                        className="w-full bg-gradient-to-r from-pink-500 to-pink-600 text-white py-2 rounded-lg font-semibold hover:scale-105 active:scale-95 transition-transform duration-200 text-sm"
+                        className="w-full bg-gradient-to-r from-pink-500 to-pink-600 text-white py-2 rounded-lg font-semibold  text-sm"
                       >
                         ADD
                       </button>

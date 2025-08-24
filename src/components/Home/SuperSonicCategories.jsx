@@ -107,15 +107,15 @@ const SuperSonicCategories = () => {
 
   return (
     <div className="max-w-7xl mx-auto p-4 space-y-6">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-2 lg:grid-cols-2 gap-6">
         
         {/* Box 1: Super Sonic Deals */}
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div className="bg-black h-36 relative">
+        <div className="bg-white rounded-2xl shadow-lg overflow-hidden md:h-60 lg:h-72">
+          <div className="bg-black lg:h-36 md:h-22 relative">
             <img 
               src="https://cdn.zeptonow.com/production/tr:w-1280,ar-2368-528,pr-true,f-auto,q-80/inventory/banner/eaff67d6-aa53-40fe-a6ba-38793acdd518.png" 
               alt="Super Sonic Deals - Up to 90% Off" 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover "
             />
           </div>
           
@@ -170,8 +170,8 @@ const SuperSonicCategories = () => {
         </div>
 
         {/* Box 2: Beauty Lit Fest */}
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div className="bg-pink-200 h-36 relative">
+        <div className="bg-white rounded-2xl shadow-lg overflow-hidden md:h-60 lg:h-72">
+          <div className="bg-pink-200 lg:h-36 md:h-22 relative">
             <img 
               src="https://cdn.zeptonow.com/production/tr:w-1280,ar-2368-528,pr-true,f-auto,q-80/inventory/banner/874d9674-2f4f-4f60-bc5b-9fb52084a738.png" 
               alt="Beauty LIT Fest - Up to 60% Off" 
