@@ -46,15 +46,15 @@ export default function ImageSlider() {
   const promoSlides = [
     {
       id: 1,
-      logo: "https://your-mobikwik-logo-url.png",
-      text: "Get ₹20 off with MobiKwik UPI 2x per user",
-      code: "MOBIZEPUPI",
+      logo: "https://cdn.zeptonow.com/production/tr:w-640,ar-1440-128,pr-true,f-auto,q-80/inventory/banner/9fb1341c-b522-41ef-989f-7df16932e0e7.png",
     },
     {
       id: 2,
-      logo: "https://your-another-logo-url.png",
-      text: "Save 10% on your first order",
-      code: "FIRSTORDER10",
+      logo: "https://cdn.zeptonow.com/production/tr:w-640,ar-1440-128,pr-true,f-auto,q-80/inventory/banner/cc205995-2363-4882-a5b7-8745414d27d7.png",
+    },
+    {
+      id: 3,
+      logo: "https://cdn.zeptonow.com/production/tr:w-640,ar-1440-128,pr-true,f-auto,q-80/inventory/banner/f5618955-3f04-4af1-8b78-1ba38efe0ccf.png",
     },
   ];
 
@@ -67,7 +67,7 @@ export default function ImageSlider() {
       <Swiper
         modules={[Autoplay]}
         slidesPerView={1}
-        loop={true}
+        loop={promoSlides.length > 2}
         autoplay={{
           delay: autoplayDelay,
           disableOnInteraction: false,
@@ -76,13 +76,10 @@ export default function ImageSlider() {
         {promoSlides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div className="w-full bg-blue-100 text-xs px-2 py-1 flex items-center justify-center space-x-2">
-              <img 
-                src={slide.logo}
-                alt="Promo Logo" 
-                className="h-4"
-              />
+              <img src={slide.logo} alt="Promo Logo" className="h-4" />
               <span>
-                {slide.text} <span className="font-bold">Code: {slide.code}</span>
+                {slide.text}{" "}
+                <span className="font-bold">Code: {slide.code}</span>
               </span>
             </div>
           </SwiperSlide>
@@ -96,7 +93,7 @@ export default function ImageSlider() {
           spaceBetween={20}
           slidesPerView={1.2}
           centeredSlides={true}
-          loop={true}
+          loop={promoSlides.length > 2}
           autoplay={{
             delay: autoplayDelay,
             disableOnInteraction: false,

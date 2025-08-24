@@ -2,16 +2,84 @@ import { useRef, useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const products = [
-  { id: 1, img: "https://via.placeholder.com/200x200", title: "Portronics Type-A To Type-C Cable", price: "₹169", oldPrice: "₹599", save: "SAVE ₹430" },
-  { id: 2, img: "https://cdn.zeptonow.com/production/tr:w-520,ar-1500-1500,pr-true,f-auto,q-80/cms/product_variant/9b8420a7-c81a-4d85-9233-a5f69d6d0613.jpg", title: "Agaro Dual Channel Tens Massager", price: "₹1839", oldPrice: "₹4999", save: "SAVE ₹3.2K" },
-  { id: 3, img: "https://cdn.zeptonow.com/production/tr:w-520,ar-1500-1500,pr-true,f-auto,q-80/cms/product_variant/383d8261-caef-4a8a-b076-945988464177.jpg", title: "Agaro Rejoice Foot Massager", price: "₹13559", oldPrice: "₹37999", save: "SAVE ₹24.4K" },
-  { id: 4, img: "https://cdn.zeptonow.com/production/tr:w-520,ar-1500-1500,pr-true,f-auto,q-80/cms/product_variant/d03426f4-c376-4e02-a732-cbabadb25ebf.jpg", title: "Agaro Amaze Foot Massager", price: "₹12059", oldPrice: "₹25900", save: "SAVE ₹13.8K" },
-  { id: 5, img: "https://cdn.zeptonow.com/production/tr:w-520,ar-1000-1000,pr-true,f-auto,q-80/inventory/product/c0b348d8-9b48-4878-ac72-914ebb1e11a6-/tmp/20230918-1639481.jpeg", title: "Lifelong Head & Body Massager", price: "₹699", oldPrice: "₹2300", save: "SAVE ₹1.6K" },
-  { id: 6, img: "https://cdn.zeptonow.com/production/tr:w-520,ar-1500-1500,pr-true,f-auto,q-80/cms/product_variant/aa788591-e22b-441d-9b2a-3bc3093b9981.jpg", title: "Portronics 65W Fast Charger", price: "₹2999" },
-  { id: 7, img: "https://cdn.zeptonow.com/production/tr:w-520,ar-1500-1500,pr-true,f-auto,q-80/cms/product_variant/2a6af98b-7be6-429e-8848-057d2b5b6747.jpg", title: "Agaro Magma Air Compression Leg", price: "₹6759", oldPrice: "₹19995", save: "SAVE ₹13.2K" },
-  { id: 8, img: "https://cdn.zeptonow.com/production/tr:w-520,ar-1500-1500,pr-true,f-auto,q-80/cms/product_variant/e1480b2c-b934-4da2-9840-df1831c15b8d.jpg", title: "Agaro Foot Massager Black", price: "₹4759", oldPrice: "₹11499", save: "SAVE ₹6.7K" },
-  { id: 9, img: "https://cdn.zeptonow.com/production/tr:w-520,ar-1500-1500,pr-true,f-auto,q-80/cms/product_variant/7cd05b06-9186-4e89-8cdc-2172d10409e3.jpg", title: "Agaro Foot Massager Black", price: "₹4759", oldPrice: "₹11499", save: "SAVE ₹6.7K" },
-  { id: 10, img: "https://cdn.zeptonow.com/production/tr:w-520,ar-1500-1500,pr-true,f-auto,q-80/cms/product_variant/8ff77e56-fcb8-4d78-bac3-2e9c00323588.jpg", title: "Agaro Foot Massager Black", price: "₹4759", oldPrice: "₹11499", save: "SAVE ₹6.7K" },
+  {
+    id: 1,
+    img: "https://cdn.zeptonow.com/production/tr:w-520,ar-1200-1200,pr-true,f-auto,q-80/cms/product_variant/895f32cb-609c-45a6-80fa-ccd9f32d4962.jpg",
+    title: "Portronics Type-A To Type-C Cable",
+    price: "₹169",
+    oldPrice: "₹599",
+    save: "SAVE ₹430",
+  },
+  {
+    id: 2,
+    img: "https://cdn.zeptonow.com/production/tr:w-520,ar-1500-1500,pr-true,f-auto,q-80/cms/product_variant/9b8420a7-c81a-4d85-9233-a5f69d6d0613.jpg",
+    title: "Agaro Dual Channel Tens Massager",
+    price: "₹1839",
+    oldPrice: "₹4999",
+    save: "SAVE ₹3.2K",
+  },
+  {
+    id: 3,
+    img: "https://cdn.zeptonow.com/production/tr:w-520,ar-1500-1500,pr-true,f-auto,q-80/cms/product_variant/383d8261-caef-4a8a-b076-945988464177.jpg",
+    title: "Agaro Rejoice Foot Massager",
+    price: "₹13559",
+    oldPrice: "₹37999",
+    save: "SAVE ₹24.4K",
+  },
+  {
+    id: 4,
+    img: "https://cdn.zeptonow.com/production/tr:w-520,ar-1500-1500,pr-true,f-auto,q-80/cms/product_variant/d03426f4-c376-4e02-a732-cbabadb25ebf.jpg",
+    title: "Agaro Amaze Foot Massager",
+    price: "₹12059",
+    oldPrice: "₹25900",
+    save: "SAVE ₹13.8K",
+  },
+  {
+    id: 5,
+    img: "https://cdn.zeptonow.com/production/tr:w-520,ar-1000-1000,pr-true,f-auto,q-80/inventory/product/c0b348d8-9b48-4878-ac72-914ebb1e11a6-/tmp/20230918-1639481.jpeg",
+    title: "Lifelong Head & Body Massager",
+    price: "₹699",
+    oldPrice: "₹2300",
+    save: "SAVE ₹1.6K",
+  },
+  {
+    id: 6,
+    img: "https://cdn.zeptonow.com/production/tr:w-520,ar-1500-1500,pr-true,f-auto,q-80/cms/product_variant/aa788591-e22b-441d-9b2a-3bc3093b9981.jpg",
+    title: "Portronics 65W Fast Charger",
+    price: "₹2999",
+  },
+  {
+    id: 7,
+    img: "https://cdn.zeptonow.com/production/tr:w-520,ar-1500-1500,pr-true,f-auto,q-80/cms/product_variant/2a6af98b-7be6-429e-8848-057d2b5b6747.jpg",
+    title: "Agaro Magma Air Compression Leg",
+    price: "₹6759",
+    oldPrice: "₹19995",
+    save: "SAVE ₹13.2K",
+  },
+  {
+    id: 8,
+    img: "https://cdn.zeptonow.com/production/tr:w-520,ar-1500-1500,pr-true,f-auto,q-80/cms/product_variant/e1480b2c-b934-4da2-9840-df1831c15b8d.jpg",
+    title: "Agaro Foot Massager Black",
+    price: "₹4759",
+    oldPrice: "₹11499",
+    save: "SAVE ₹6.7K",
+  },
+  {
+    id: 9,
+    img: "https://cdn.zeptonow.com/production/tr:w-520,ar-1500-1500,pr-true,f-auto,q-80/cms/product_variant/7cd05b06-9186-4e89-8cdc-2172d10409e3.jpg",
+    title: "Agaro Foot Massager Black",
+    price: "₹4759",
+    oldPrice: "₹11499",
+    save: "SAVE ₹6.7K",
+  },
+  {
+    id: 10,
+    img: "https://cdn.zeptonow.com/production/tr:w-520,ar-1500-1500,pr-true,f-auto,q-80/cms/product_variant/8ff77e56-fcb8-4d78-bac3-2e9c00323588.jpg",
+    title: "Agaro Foot Massager Black",
+    price: "₹4759",
+    oldPrice: "₹11499",
+    save: "SAVE ₹6.7K",
+  },
 ];
 
 export default function ProductSlider() {
@@ -25,7 +93,10 @@ export default function ProductSlider() {
     const scrollAmount = clientWidth;
 
     sliderRef.current.scrollTo({
-      left: direction === "left" ? scrollLeft - scrollAmount : scrollLeft + scrollAmount,
+      left:
+        direction === "left"
+          ? scrollLeft - scrollAmount
+          : scrollLeft + scrollAmount,
       behavior: "smooth",
     });
   };
@@ -54,7 +125,10 @@ export default function ProductSlider() {
       {/* Heading */}
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-xl font-bold">Elevate Yourself</h2>
-        <a href="#" className="text-pink-500 text-sm font-semibold hover:underline">
+        <a
+          href="#"
+          className="text-pink-500 text-sm font-semibold hover:underline"
+        >
           See All →
         </a>
       </div>
@@ -95,7 +169,9 @@ export default function ProductSlider() {
 
               {/* Old Price Left */}
               {p.oldPrice && (
-                <p className="text-gray-500 text-xs line-through">{p.oldPrice}</p>
+                <p className="text-gray-500 text-xs line-through">
+                  {p.oldPrice}
+                </p>
               )}
 
               {/* Save Text Left */}
