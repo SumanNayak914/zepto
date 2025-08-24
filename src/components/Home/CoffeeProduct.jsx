@@ -70,7 +70,7 @@ const CoffeeLoversSection = () => {
   };
 
   return (
-    <div className="bg-gray-100 p-4">
+    <div className="bg-white p-4">
       <div className="max-w-7xl mx-auto">
         <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-3xl p-4 md:p-8 relative overflow-hidden">
           {/* Main Content Container */}
