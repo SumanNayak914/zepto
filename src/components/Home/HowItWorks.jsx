@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 
 const steps = [
   {
@@ -23,10 +23,12 @@ const steps = [
 
 function StepCard({ img, title, desc }) {
   return (
-    <div className="bg-white shadow-md rounded-2xl p-6 hover:shadow-xl hover:scale-105 transition duration-300">
-      <img src={img} alt={title} className="mx-auto w-20 h-20 mb-4" />
-      <h3 className="font-semibold text-lg mb-2">{title}</h3>
-      <p className="text-gray-600 text-sm">{desc}</p>
+    <div className="bg-white shadow-md rounded-2xl p-6 hover:shadow-xl hover:scale-105 transition duration-300 md:block flex flex-row items-center space-x-4">
+      <img src={img} alt={title} className="w-20 h-20 flex-shrink-0 md:mx-auto md:mb-4" />
+      <div className="md:text-center">
+        <h3 className="font-semibold text-lg mb-2">{title}</h3>
+        <p className="text-gray-600 text-sm">{desc}</p>
+      </div>
     </div>
   );
 }
