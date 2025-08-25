@@ -1,5 +1,3 @@
-
-
 // import React, { useState } from 'react';
 // import { Search, User, ShoppingCart, ChevronDown, MapPin } from 'lucide-react';
 // import { motion, AnimatePresence } from "framer-motion";
@@ -24,7 +22,7 @@
 //             onClick={onClose}
 //             className="fixed inset-0 bg-black bg-opacity-50 z-40"
 //           />
-          
+
 //           {/* Cart Drawer - Your existing cart page */}
 //           <motion.div
 //             initial={{ x: '100%' }}
@@ -34,7 +32,7 @@
 //             className="fixed top-0 right-0 w-full md:w-96 h-full bg-gray-100 z-50 shadow-xl overflow-y-auto"
 //           >
 //             {/* Close button overlay */}
-//             <button 
+//             <button
 //               onClick={onClose}
 //               className="absolute top-4 left-4 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-50"
 //             >
@@ -65,7 +63,7 @@
 
 //   const searchPlaceholders = [
 //     "amul butter",
-//     "maggi noodles", 
+//     "maggi noodles",
 //     "coca cola",
 //     "dairy milk",
 //     "basmati rice",
@@ -110,13 +108,13 @@
 //     <>
 //       {/* Main header container with responsive backgrounds */}
 //       <div className="bg-[#EEBF65] md:bg-gradient-to-b md:from-purple-100 md:to-white shadow-sm">
-        
+
 //         {/* Desktop and Tablet Header */}
 //         <div className="hidden md:block">
 //           <div className="px-4">
-           
+
 //             <div className="flex items-center justify-between py-3  ">
-              
+
 //               <div className="flex items-center space-x-3 pl-12 ">
 //                 <div className="text-white font-semibold text-3xl bg-purple-600 rounded-full py-2 px-6 text-center">
 //                   zepto
@@ -143,7 +141,7 @@
 //                     onChange={(e) => setSearchQuery(e.target.value)}
 //                     className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
 //                   />
-                  
+
 //                   {searchQuery === '' && (
 //                     <div className="absolute left-10 top-1/2 transform -translate-y-1/2 pointer-events-none text-gray-400">
 //                       <div className="flex items-center">
@@ -174,7 +172,7 @@
 //                   <User className="w-5 h-5 text-black" />
 //                   <span className="text-gray-700 font-medium">Login</span>
 //                 </div>
-//                 <div 
+//                 <div
 //                   className="flex items-center space-x-1 cursor-pointer"
 //                   onClick={() => setIsCartOpen(true)}
 //                 >
@@ -192,8 +190,8 @@
 //                     <div
 //                       key={index}
 //                       className={`flex items-center space-x-2 cursor-pointer py-2 px-3 rounded-lg transition-colors ${
-//                         category.active 
-//                           ? 'text-purple-600 bg-purple-50 border-b-2 border-purple-600' 
+//                         category.active
+//                           ? 'text-purple-600 bg-purple-50 border-b-2 border-purple-600'
 //                           : 'text-gray-600 hover:text-purple-600 hover:bg-gray-50'
 //                       }`}
 //                     >
@@ -255,7 +253,7 @@
 //                   onChange={(e) => setSearchQuery(e.target.value)}
 //                   className="w-full pl-9 pr-4 py-2.5 bg-transparent border-none rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm"
 //                 />
-                
+
 //                 {!searchQuery && (
 //                   <div className="absolute left-9 top-1/2 transform -translate-y-1/2 pointer-events-none">
 //                     <div className="flex items-center text-sm text-gray-400">
@@ -313,8 +311,8 @@
 // };
 
 // export default Header;
-import React, { useState } from 'react';
-import { Search, User, ShoppingCart, ChevronDown, MapPin } from 'lucide-react';
+import React, { useState } from "react";
+import { Search, User, ShoppingCart, ChevronDown, MapPin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Import your existing cart components
@@ -337,17 +335,17 @@ const CartDrawer = ({ isOpen, onClose }) => {
             onClick={onClose}
             className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
           />
-          
+
           {/* Cart Drawer - Your existing cart page */}
           <motion.div
-            initial={{ x: '100%' }}
+            initial={{ x: "100%" }}
             animate={{ x: 0 }}
-            exit={{ x: '100%' }}
-            transition={{ type: 'tween', duration: 0.3 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "tween", duration: 0.3 }}
             className="fixed top-0 right-0 w-full md:w-96 h-full bg-gray-100 z-50 shadow-xl overflow-y-auto"
           >
             {/* Close button overlay */}
-            <button 
+            <button
               onClick={onClose}
               className="absolute top-4 left-4 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-50"
             >
@@ -371,65 +369,137 @@ const CartDrawer = ({ isOpen, onClose }) => {
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeZepto, setActiveZepto] = useState('zepto');
+  const [searchQuery, setSearchQuery] = useState("");
+  const [activeZepto, setActiveZepto] = useState("zepto");
   const [currentPlaceholderIndex, setCurrentPlaceholderIndex] = useState(0);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   const searchPlaceholders = [
     "amul butter",
-    "maggi noodles", 
+    "maggi noodles",
     "coca cola",
     "dairy milk",
     "basmati rice",
     "sunflower oil",
     "colgate paste",
-    "tata salt"
+    "tata salt",
   ];
 
   // index auto-change
   React.useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentPlaceholderIndex((prev) => (prev + 1) % searchPlaceholders.length);
+      setCurrentPlaceholderIndex(
+        (prev) => (prev + 1) % searchPlaceholders.length
+      );
     }, 3000);
     return () => clearInterval(interval);
   }, [searchPlaceholders.length]);
 
   const categories = [
-    { name: 'All', image:"https://cdn.zeptonow.com/production/inventory/banner/a767cf6e-9113-409b-b5ab-ac0d22a7db58.png", active: true },
-    { name: 'Cafe', image: "https://cdn.zeptonow.com/production/inventory/banner/e8abccfb-64fe-4249-84d3-426eccf01e23.png" },
-    { name: 'Home', image:"https://cdn.zeptonow.com/production/inventory/banner/be82f78d-d993-4838-9f4a-4c64cd387126.png"  },
-    { name: 'Toys', image:"https://cdn.zeptonow.com/production/inventory/banner/b6960301-bb3c-4b75-af0e-433a8ce0a6b9.png" },
-    { name: 'Fresh', image: "https://cdn.zeptonow.com/production/inventory/banner/8e8a58b9-f2d7-46fb-9634-930b016499fa.png" },
-    { name: 'Electronics', image: "https://cdn.zeptonow.com/production/inventory/banner/5c9a7bea-68b1-4bad-9fab-44cc940b72ee.png" },
-     { name: 'Mobiles', image:"https://cdn.zeptonow.com/production/inventory/banner/c882779f-738d-46f8-8656-8ebb72246b46.png" },
-    { name: 'Beauty', image:"https://cdn.zeptonow.com/production/inventory/banner/fcb1b518-5047-4aee-a6c4-3677c801d2ca.png"  },
-    { name: 'Fashion', image:"https://cdn.zeptonow.com/production/inventory/banner/331fa0bc-afda-409d-a201-acc3deedaa2d.png"},
+    {
+      name: "All",
+      image:
+        "https://cdn.zeptonow.com/production/inventory/banner/a767cf6e-9113-409b-b5ab-ac0d22a7db58.png",
+      active: true,
+    },
+    {
+      name: "Cafe",
+      image:
+        "https://cdn.zeptonow.com/production/inventory/banner/e8abccfb-64fe-4249-84d3-426eccf01e23.png",
+    },
+    {
+      name: "Home",
+      image:
+        "https://cdn.zeptonow.com/production/inventory/banner/be82f78d-d993-4838-9f4a-4c64cd387126.png",
+    },
+    {
+      name: "Toys",
+      image:
+        "https://cdn.zeptonow.com/production/inventory/banner/b6960301-bb3c-4b75-af0e-433a8ce0a6b9.png",
+    },
+    {
+      name: "Fresh",
+      image:
+        "https://cdn.zeptonow.com/production/inventory/banner/8e8a58b9-f2d7-46fb-9634-930b016499fa.png",
+    },
+    {
+      name: "Electronics",
+      image:
+        "https://cdn.zeptonow.com/production/inventory/banner/5c9a7bea-68b1-4bad-9fab-44cc940b72ee.png",
+    },
+    {
+      name: "Mobiles",
+      image:
+        "https://cdn.zeptonow.com/production/inventory/banner/c882779f-738d-46f8-8656-8ebb72246b46.png",
+    },
+    {
+      name: "Beauty",
+      image:
+        "https://cdn.zeptonow.com/production/inventory/banner/fcb1b518-5047-4aee-a6c4-3677c801d2ca.png",
+    },
+    {
+      name: "Fashion",
+      image:
+        "https://cdn.zeptonow.com/production/inventory/banner/331fa0bc-afda-409d-a201-acc3deedaa2d.png",
+    },
   ];
 
   const mobileCategories = [
-    { name: 'All', image: "https://cdn.zeptonow.com/production/inventory/banner/a767cf6e-9113-409b-b5ab-ac0d22a7db58.png" },
-    { name: 'Cafe', image: "https://cdn.zeptonow.com/production/inventory/banner/e8abccfb-64fe-4249-84d3-426eccf01e23.png" },
-    { name: 'Home', image: "https://cdn.zeptonow.com/production/inventory/banner/be82f78d-d993-4838-9f4a-4c64cd387126.png" },
-    { name: 'Toys', image: "https://cdn.zeptonow.com/production/inventory/banner/b6960301-bb3c-4b75-af0e-433a8ce0a6b9.png" },
-   { name: 'Fresh', image: "https://cdn.zeptonow.com/production/inventory/banner/8e8a58b9-f2d7-46fb-9634-930b016499fa.png" },
-    { name: 'Electronics', image: "https://cdn.zeptonow.com/production/inventory/banner/5c9a7bea-68b1-4bad-9fab-44cc940b72ee.png" },
-    { name: 'Mobiles', image:"https://cdn.zeptonow.com/production/inventory/banner/c882779f-738d-46f8-8656-8ebb72246b46.png" },
-     { name: 'Beauty', image:"https://cdn.zeptonow.com/production/inventory/banner/fcb1b518-5047-4aee-a6c4-3677c801d2ca.png"  },
-    { name: 'Fashion', image: "https://cdn.zeptonow.com/production/inventory/banner/331fa0bc-afda-409d-a201-acc3deedaa2d.png" },
+    {
+      name: "All",
+      image:
+        "https://cdn.zeptonow.com/production/inventory/banner/a767cf6e-9113-409b-b5ab-ac0d22a7db58.png",
+    },
+    {
+      name: "Cafe",
+      image:
+        "https://cdn.zeptonow.com/production/inventory/banner/e8abccfb-64fe-4249-84d3-426eccf01e23.png",
+    },
+    {
+      name: "Home",
+      image:
+        "https://cdn.zeptonow.com/production/inventory/banner/be82f78d-d993-4838-9f4a-4c64cd387126.png",
+    },
+    {
+      name: "Toys",
+      image:
+        "https://cdn.zeptonow.com/production/inventory/banner/b6960301-bb3c-4b75-af0e-433a8ce0a6b9.png",
+    },
+    {
+      name: "Fresh",
+      image:
+        "https://cdn.zeptonow.com/production/inventory/banner/8e8a58b9-f2d7-46fb-9634-930b016499fa.png",
+    },
+    {
+      name: "Electronics",
+      image:
+        "https://cdn.zeptonow.com/production/inventory/banner/5c9a7bea-68b1-4bad-9fab-44cc940b72ee.png",
+    },
+    {
+      name: "Mobiles",
+      image:
+        "https://cdn.zeptonow.com/production/inventory/banner/c882779f-738d-46f8-8656-8ebb72246b46.png",
+    },
+    {
+      name: "Beauty",
+      image:
+        "https://cdn.zeptonow.com/production/inventory/banner/fcb1b518-5047-4aee-a6c4-3677c801d2ca.png",
+    },
+    {
+      name: "Fashion",
+      image:
+        "https://cdn.zeptonow.com/production/inventory/banner/331fa0bc-afda-409d-a201-acc3deedaa2d.png",
+    },
   ];
 
   return (
     <>
       {/* Main header container with responsive backgrounds */}
       <div className="bg-[#EEBF65] md:bg-gradient-to-b md:from-purple-100 md:to-white shadow-sm">
-        
         {/* Desktop and Tablet Header */}
         <div className="hidden md:block">
           <div className="px-4">
-           
             <div className="flex items-center justify-between py-3  ">
-              
               <div className="flex items-center space-x-3 pl-12 ">
                 <div className="text-white font-semibold text-3xl bg-purple-600 rounded-full py-2 px-6 text-center">
                   zepto
@@ -456,8 +526,8 @@ const Header = () => {
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
-                  
-                  {searchQuery === '' && (
+
+                  {searchQuery === "" && (
                     <div className="absolute left-10 top-1/2 transform -translate-y-1/2 pointer-events-none text-gray-400">
                       <div className="flex items-center">
                         <span>Search for </span>
@@ -487,7 +557,7 @@ const Header = () => {
                   <User className="w-5 h-5 text-black" />
                   <span className="text-gray-700 font-medium">Login</span>
                 </div>
-                <div 
+                <div
                   className="flex items-center space-x-1 cursor-pointer"
                   onClick={() => setIsCartOpen(true)}
                 >
@@ -505,12 +575,16 @@ const Header = () => {
                     <div
                       key={index}
                       className={`flex items-center space-x-2 cursor-pointer py-2 px-3 rounded-lg transition-colors ${
-                        category.active 
-                          ? 'text-purple-600 bg-purple-50 border-b-2 border-purple-600' 
-                          : 'text-gray-600 hover:text-purple-600 hover:bg-gray-50'
+                        category.active
+                          ? "text-purple-600 bg-purple-50 border-b-2 border-purple-600"
+                          : "text-gray-600 hover:text-purple-600 hover:bg-gray-50"
                       }`}
                     >
-                      <img src={category.image} alt={category.name} className="w-5 h-5" />
+                      <img
+                        src={category.image}
+                        alt={category.name}
+                        className="w-5 h-5"
+                      />
                       <span className="font-medium">{category.name}</span>
                     </div>
                   );
@@ -528,21 +602,21 @@ const Header = () => {
               <div className="bg-gray-100 rounded-full p-1 w-72 max-w-full">
                 <div className="flex">
                   <button
-                    onClick={() => setActiveZepto('zepto')}
+                    onClick={() => setActiveZepto("zepto")}
                     className={`flex-1 py-2.5 px-6 rounded-full font-semibold text-sm transition-all duration-300 ${
-                      activeZepto === 'zepto'
-                        ? 'bg-purple-600 text-white shadow-lg'
-                        : 'text-gray-600 hover:text-purple-600'
+                      activeZepto === "zepto"
+                        ? "bg-purple-600 text-white shadow-lg"
+                        : "text-gray-600 hover:text-purple-600"
                     }`}
                   >
                     zepto
                   </button>
                   <button
-                    onClick={() => setActiveZepto('super-saver')}
+                    onClick={() => setActiveZepto("super-saver")}
                     className={`flex-1 py-2.5 px-4 rounded-full font-medium text-sm transition-all duration-300 whitespace-nowrap ${
-                      activeZepto === 'super-saver'
-                        ? 'bg-green-50 text-green-600 shadow-lg'
-                        : 'text-green-600 hover:text-green-700'
+                      activeZepto === "super-saver"
+                        ? "bg-green-50 text-green-600 shadow-lg"
+                        : "text-green-600 hover:text-green-700"
                     }`}
                   >
                     zepto Super Saver
@@ -554,7 +628,9 @@ const Header = () => {
             {/* Location */}
             <div className="flex items-center space-x-2 mb-3 cursor-pointer">
               <MapPin className="w-4 h-4 text-black" />
-              <span className="text-sm text-gray-700 font-medium">Select Location</span>
+              <span className="text-sm text-gray-700 font-medium">
+                Select Location
+              </span>
               <ChevronDown className="w-3 h-3 text-black" />
             </div>
 
@@ -568,7 +644,7 @@ const Header = () => {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-9 pr-4 py-2.5 bg-transparent border-none rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm"
                 />
-                
+
                 {!searchQuery && (
                   <div className="absolute left-9 top-1/2 transform -translate-y-1/2 pointer-events-none">
                     <div className="flex items-center text-sm text-gray-400">
@@ -601,20 +677,18 @@ const Header = () => {
                     key={index}
                     className="flex items-center space-x-2 cursor-pointer min-w-0 flex-shrink-0"
                   >
-                    <img src={category.image} alt={category.name} className="w-5 h-5" />
-                    <span className="text-sm font-medium text-gray-700">{category.name}</span>
+                    <img
+                      src={category.image}
+                      alt={category.name}
+                      className="w-5 h-5"
+                    />
+                    <span className="text-sm font-medium text-gray-700">
+                      {category.name}
+                    </span>
                   </div>
                 );
               })}
             </div>
-
-            {/* Mobile Cart Button - Fixed bottom right */}
-            <button
-              onClick={() => setIsCartOpen(true)}
-              className="fixed bottom-6 right-6 bg-purple-600 text-white p-4 rounded-full shadow-lg hover:bg-purple-700 transition-colors z-30 md:hidden"
-            >
-              <ShoppingCart className="w-6 h-6" />
-            </button>
           </div>
         </div>
       </div>
