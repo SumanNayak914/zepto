@@ -10,9 +10,10 @@ import BottomNav from "./components/BottomNav";
 
 const App = () => {
   const location = useLocation();
+  const hideHeaderRoutes = ["/category", "/deals", "/cart"];
   return (
     <>
-      <Header />
+      {!hideHeaderRoutes.includes(location.pathname) && <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/category" element={<Category />} />
