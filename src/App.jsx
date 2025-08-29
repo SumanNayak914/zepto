@@ -11,6 +11,7 @@ import BottomNav from "./components/BottomNav";
 const App = () => {
   const location = useLocation();
   const hideHeaderRoutes = ["/category", "/deals", "/cart"];
+  const hideFooterRoutes = ["/deals", "/cart"];
   return (
     <>
       {!hideHeaderRoutes.includes(location.pathname) && <Header />}
@@ -20,7 +21,8 @@ const App = () => {
         <Route path="/dealstore" element={<DealStore />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
-      <Footer />
+       {!hideFooterRoutes.includes(location.pathname) && <Footer/>}
+      {/* <Footer /> */}
       {location.pathname === "/" && <BottomNav />}
     </>
   );
