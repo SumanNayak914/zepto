@@ -85,7 +85,7 @@ const BestSeller = () => {
   ];
 
   return (
-    <div className="container mx-auto px-3 mb-8">
+    <div className="container w-7xl mx-auto px-3 mb-8">
       <h2 className="text-xl font-bold mb-3">Best Seller</h2>
       <div className="flex gap-3 overflow-x-auto no-scrollbar pb-4 snap-x">
         {products.map((item) => (

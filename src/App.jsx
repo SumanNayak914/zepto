@@ -14,6 +14,9 @@ import Electronics from "./pages/Navcategories/Electronics";
 import Mobiles from "./pages/Navcategories/Mobiles";
 import Beauty from "./pages/Navcategories/Beauty";
 import Fashion from "./pages/Navcategories/Fashion";
+import ProfilePage from "./pages/ProfilePage";
+
+
 
 const App = () => {
   const location = useLocation();
@@ -35,6 +38,8 @@ const App = () => {
         <Route path="/mobiles" element={<Mobiles />} />
         <Route path="/beauty" element={<Beauty />} />
         <Route path="/fashion" element={<Fashion />} />
+        <Route path="/profile" element={<ProfilePage />} />
+     
       </Routes>
       {!hideFooterRoutes.includes(location.pathname) && <Footer />}
       {/* <Footer /> */}

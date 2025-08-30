@@ -322,7 +322,7 @@ const products = [
 
 const CafeCategory = () => {
   return (
-    <div className="container mx-auto px-3">
+    <div className="container w-7xl mx-auto px-3">
       {/* Heading */}
       <h2 className="text-2xl font-bold text-center mb-4">
         Handpicked For You!

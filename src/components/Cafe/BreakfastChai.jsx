@@ -208,7 +208,7 @@ const BreakfastChai = () => {
   );
 
   return (
-    <div className="container mx-auto px-3">
+    <div className="container  w-7xl mx-auto px-3">
       {renderProducts("Breakfast", breakfast)}
       {renderProducts("Chai", chai)}
     </div>
