@@ -6,11 +6,15 @@ import SnackTime from '../../components/Cafe/SnackTime '
 import BreakfastChai from '../../components/Cafe/BreakfastChai'
 import HowItWorks from '../../components/Home/HowItWorks'
 import PopularCategories from '../../components/Home/PopularCategories'
+import Banner from '../../components/Cafe/Banner'
+import FoodCategories from '../../components/Cafe/FoodCategories'
 
 const Cafe = () => {
   return (
     <div>
+      <Banner/>
       <ProductCarousel/>
+      <FoodCategories/>
       <NewlyLaunched/>
       <BestSeller/>
       <SnackTime />

@@ -97,10 +97,10 @@ const BestSeller = () => {
   const visibleProducts = showAll ? products : products.slice(0, 6);
 
   return (
-    <div className="bg-gray-50  p-4">
-      <div className="max-w-6xl mx-auto">
+    <div className="bg-gray-50 p-4">
+      <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h2 className="text-xl md:text-2xl font-bold text-left mb-4 text-gray-800">
+        <h2 className="text-2xl md:text-3xl font-bold text-left mb-6 text-gray-800">
           Best Seller
         </h2>
 
@@ -110,7 +110,7 @@ const BestSeller = () => {
             {visibleProducts.map((item) => (
               <div
                 key={item.id}
-                className="bg-white rounded-lg shadow-sm border relative overflow-hidden"
+                className="bg-white rounded-lg  relative overflow-hidden"
               >
                 {/* Image square */}
                 <div className="w-full aspect-square overflow-hidden">
@@ -123,12 +123,12 @@ const BestSeller = () => {
 
                 {/* Content */}
                 <div className="p-2">
-                  <div className="flex items-center justify-between mb-1">
+                  <p className="font-medium text-xs mb-1 leading-tight">{item.name}</p>
+                  <p className="text-gray-500 text-xs mb-1">{item.qty}</p>
+                  <div className="flex items-center justify-between">
                     <span className="text-sm font-bold text-green-600">₹{item.price}</span>
                     <span className="line-through text-gray-400 text-xs">₹{item.oldPrice}</span>
                   </div>
-                  <p className="text-gray-500 text-xs mb-1">{item.qty}</p>
-                  <p className="font-medium text-xs truncate leading-tight">{item.name}</p>
                 </div>
 
                 {/* ADD/ADDED Button */}
@@ -159,13 +159,13 @@ const BestSeller = () => {
           )}
         </div>
 
-        {/* Desktop/Tablet Horizontal Scroll */}
+        {/* Desktop/Tablet Horizontal Scroll - 7 products visible */}
         <div className="hidden md:block">
-          <div className="flex gap-3 overflow-x-auto no-scrollbar pb-4 snap-x">
+          <div className="flex gap-4 overflow-x-auto no-scrollbar pb-4">
             {products.map((item) => (
               <div
                 key={item.id}
-                className="min-w-[90px] sm:min-w-[110px] max-w-[120px] bg-white rounded-lg relative snap-start"
+                className="min-w-[120px] max-w-[140px] bg-white rounded-lg  relative flex-shrink-0"
               >
                 {/* Image square */}
                 <div className="w-full aspect-square overflow-hidden rounded-lg">
@@ -177,27 +177,25 @@ const BestSeller = () => {
                 </div>
 
                 {/* Content */}
-                <div className="p-2 text-[11px] sm:text-sm">
-                  <div className="flex items-center gap-1">
-                    <span className="text-sm font-semibold">₹{item.price}</span>
-                    <span className="line-through text-gray-400 text-[10px]">
-                      ₹{item.oldPrice}
-                    </span>
+                <div className="p-2">
+                  <p className="font-medium text-xs mb-1">{item.name}</p>
+                  <p className="text-gray-500 text-xs mb-1">{item.qty}</p>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-sm font-bold text-green-600">₹{item.price}</span>
+                    <span className="line-through text-gray-400 text-xs">₹{item.oldPrice}</span>
                   </div>
-                  <p className="text-gray-500 text-[10px]">{item.qty}</p>
-                  <p className="font-medium truncate">{item.name}</p>
                 </div>
 
-                {/* ADD Button */}
-                <button 
+                {/* ADD/ADDED Button */}
+                <button
                   onClick={() => handleAddClick(item.id)}
-                  className={`absolute bottom-2 right-2 px-2 py-[1px] rounded-full text-[10px] font-bold transition-all duration-200 ${
+                  className={`absolute bottom-2 right-2 px-2 py-1 rounded-full text-xs font-bold transition-all duration-200 ${
                     addedItems[item.id]
                       ? 'bg-green-500 text-white border border-green-500'
                       : 'bg-white border border-pink-500 text-pink-500 hover:bg-pink-50'
                   }`}
                 >
-                  {addedItems[item.id] ? '✓' : 'ADD'}
+                  {addedItems[item.id] ? 'ADDED' : 'ADD'}
                 </button>
               </div>
             ))}

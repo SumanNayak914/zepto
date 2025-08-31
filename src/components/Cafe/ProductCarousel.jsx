@@ -97,7 +97,7 @@ const CafeCategory = () => {
   const visibleProducts = showAll ? products : products.slice(0, 6);
 
   return (
-    <div className="bg-gray-50  p-4">
+    <div className="bg-gray-50 p-4">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <h2 className="text-2xl md:text-3xl font-bold text-left mb-6 text-gray-800">
@@ -110,7 +110,7 @@ const CafeCategory = () => {
             {visibleProducts.map((item) => (
               <div
                 key={item.id}
-                className="bg-white rounded-lg shadow-sm border relative overflow-hidden"
+                className="bg-white rounded-lg  relative overflow-hidden"
               >
                 {/* Image square */}
                 <div className="w-full aspect-square overflow-hidden">
@@ -123,12 +123,11 @@ const CafeCategory = () => {
 
                 {/* Content */}
                 <div className="p-2">
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-sm font-bold text-green-600">₹{item.price}</span>
-                    <span className="line-through text-gray-400 text-xs">₹{item.oldPrice}</span>
-                  </div>
+                  <p className="font-medium text-xs mb-1 leading-tight">{item.name}</p>
                   <p className="text-gray-500 text-xs mb-1">{item.qty}</p>
-                  <p className="font-medium text-xs truncate leading-tight">{item.name}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-bold text-green-600">₹{item.price}</span>
+                  </div>
                 </div>
 
                 {/* ADD/ADDED Button */}
@@ -165,10 +164,10 @@ const CafeCategory = () => {
             {products.map((item) => (
               <div
                 key={item.id}
-                className="min-w-[120px] max-w-[140px] bg-white rounded-lg shadow-sm border relative flex-shrink-0"
+                className="min-w-[120px] max-w-[140px] bg-white rounded-lg  relative flex-shrink-0"
               >
                 {/* Image square */}
-                <div className="w-full aspect-square overflow-hidden rounded-t-lg">
+                <div className="w-full aspect-square overflow-hidden rounded-lg ">
                   <img
                     src={item.image}
                     alt={item.name}
@@ -178,12 +177,11 @@ const CafeCategory = () => {
 
                 {/* Content */}
                 <div className="p-2">
+                  <p className="font-medium text-xs mb-1">{item.name}</p>
+                  <p className="text-gray-500 text-xs mb-1">{item.qty}</p>
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-sm font-bold text-green-600">₹{item.price}</span>
-                    <span className="line-through text-gray-400 text-xs">₹{item.oldPrice}</span>
                   </div>
-                  <p className="text-gray-500 text-xs mb-1">{item.qty}</p>
-                  <p className="font-medium text-xs">{item.name}</p>
                 </div>
 
                 {/* ADD/ADDED Button */}
