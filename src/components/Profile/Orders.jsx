@@ -54,15 +54,15 @@ const OrderComponent = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Header */}
-      <div className="bg-white shadow-sm">
-        <div className="max-w-md mx-auto px-4 py-4 flex items-center">
+      {/* <div className="bg-white ">
+        <div className="max-w-md px-4  py-4 flex items-center">
           <ChevronLeft className="w-6 h-6 text-gray-600 mr-3" />
           <h1 className="text-lg font-semibold text-gray-900">Orders</h1>
         </div>
-      </div>
+      </div> */}
 
       {/* Orders List */}
-      <div className="max-w-md mx-auto px-4 py-4 space-y-3">
+      <div className="w-full  px-4 py-4 space-y-3">
         {orders.map((order) => (
           <div key={order.id} className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
             <div className="p-4">
@@ -105,8 +105,8 @@ const OrderComponent = () => {
       </div>
 
       {/* Summary */}
-      <div className="max-w-md mx-auto px-4 py-6">
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
+      <div className="max-w-full mx-auto px-4 py-6">
+        <div className="bg-white  rounded-lg shadow-sm border border-gray-200 p-4">
           <h2 className="text-lg font-semibold text-gray-900 mb-3">Order Summary</h2>
           <div className="space-y-2 text-sm">
             <div className="flex justify-between">

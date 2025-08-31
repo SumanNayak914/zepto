@@ -21,7 +21,8 @@ import ProfilePage from "./pages/ProfilePage";
 const App = () => {
   const location = useLocation();
   const hideHeaderRoutes = ["/category", "/deals", "/cart"];
-  const hideFooterRoutes = ["/deals", "/cart"];
+  const hideFooterRoutes = ["/deals", "/cart", "/profile"];
+  const bottomnavRoutes = ["/", "/deals", "/cart", "/profile","/toy","/fresh","/electronics","/mobiles","/beauty","/fashion","/cafe"];
   return (
     <>
       {!hideHeaderRoutes.includes(location.pathname) && <Header />}
@@ -43,7 +44,8 @@ const App = () => {
       </Routes>
       {!hideFooterRoutes.includes(location.pathname) && <Footer />}
       {/* <Footer /> */}
-      {location.pathname === "/" && <BottomNav />}
+      {bottomnavRoutes.includes(location.pathname) && <BottomNav />}
+      
     </>
   );
 };

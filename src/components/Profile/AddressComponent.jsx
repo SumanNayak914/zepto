@@ -109,7 +109,7 @@ const AddressComponent = () => {
   );
 
   return (
-    <div className="max-w-md mx-auto bg-white min-h-screen">
+    <div className="max-w-full mx-auto bg-white min-h-screen ">
       {/* Header */}
       <div className="bg-white border-b border-gray-100 p-4">
         <button 

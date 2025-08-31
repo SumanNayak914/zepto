@@ -464,7 +464,7 @@
 import React, { useState } from 'react';
 import { Search, User, ShoppingCart, ChevronDown, MapPin } from 'lucide-react';
 import { motion, AnimatePresence } from "framer-motion";
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 // Import your existing cart components
 import CartHeader from "../components/cart/CartHeader";
@@ -526,6 +526,8 @@ const Header = () => {
   const [currentPlaceholderIndex, setCurrentPlaceholderIndex] = useState(0);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(0); // Track selected category by index
+// const hideHeaderRoutes = ["/category", "/deals", "/cart"];
+ const location = useLocation();
 
   const searchPlaceholders = [
     "amul butter",
@@ -907,12 +909,15 @@ const Header = () => {
             </div>
 
             {/* Mobile Cart Button - Fixed bottom right */}
-            <button
+           {
+             !location.pathname == "/" &&  <button
               onClick={() => setIsCartOpen(true)}
               className="fixed bottom-6 right-6 bg-purple-600 text-white p-4 rounded-full shadow-lg hover:bg-purple-700 transition-colors z-30 md:hidden"
             >
               <ShoppingCart className="w-6 h-6" />
             </button>
+             
+           }
           </div>
         </div>
       </div>

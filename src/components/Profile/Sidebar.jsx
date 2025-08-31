@@ -3,7 +3,7 @@ import { Package, Headphones, Heart, MapPin, User, LogOut, Gift, CreditCard, Inf
 
 const Sidebar = ({ activeComponent, setActiveComponent }) => {
   return (
-    <div className="w-80 bg-white h-screen flex flex-col justify-between border-r border-gray-200 p-4">
+    <div className="w-full bg-white h-auto  flex flex-col justify-between overflow-hidden  p-4">
       {/* User Profile Section */}
       <div className="space-y-4">
         <div className="flex items-center space-x-3 mb-6">
@@ -53,7 +53,8 @@ const Sidebar = ({ activeComponent, setActiveComponent }) => {
         {/* Available Balance */}
         <div className="flex items-center justify-between">
           <span className="text-sm text-gray-600">Available Balance: ₹0</span>
-          <button className="bg-black text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-800 transition-colors">
+          <button className="bg-black text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-800 transition-colors"
+          onClick={() => setActiveComponent('balance')}>
             Add Balance
           </button>
         </div>
@@ -61,7 +62,7 @@ const Sidebar = ({ activeComponent, setActiveComponent }) => {
         {/* Free Cash Banner */}
         <div 
           className="bg-gradient-to-r from-pink-100 to-purple-100 border border-pink-200 rounded-lg p-3 cursor-pointer hover:bg-gradient-to-r hover:from-pink-200 hover:to-purple-200 transition-all"
-          onClick={() => setActiveComponent('balance')}
+
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
@@ -140,16 +141,16 @@ const Sidebar = ({ activeComponent, setActiveComponent }) => {
       {/* Bottom Section */}
       <div className="space-y-4">
         {/* Logout */}
-        <div className="border-t pt-4">
+        <div className=" pt-4">
           <div className="flex items-center justify-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 cursor-pointer rounded-lg transition-colors">
-            <LogOut className="mr-3 h-5 w-5 text-gray-500" />
-            Log Out
+            <LogOut className=" h-4 w-4  text-gray-500" />
+            <p className="font-bold  text-gray-500 text-lg">Log Out</p>
           </div>
         </div>
 
         {/* Zepto Logo */}
         <div className="text-center">
-          <span className="text-2xl font-light text-gray-400 tracking-wider">zepto</span>
+          <span className="text-2xl font-bold text-gray-400 tracking-wider">zepto</span>
         </div>
       </div>
     </div>

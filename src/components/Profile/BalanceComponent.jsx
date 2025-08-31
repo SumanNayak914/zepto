@@ -29,7 +29,7 @@ const BalanceComponent = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+    <div className="w-full mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
       {/* Header */}
       <div className="bg-gradient-to-r from-purple-600 to-purple-800 px-6 py-4">
         <div className="flex items-center justify-between">
@@ -69,7 +69,7 @@ const BalanceComponent = () => {
       <div className="p-4">
         <button
           onClick={() => setShowAddMoney(!showAddMoney)}
-          className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-4 rounded-lg transition duration-200 flex items-center justify-center gap-2"
+          className="w-fit mx-auto bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-4 rounded-lg transition duration-200 flex items-center justify-center gap-2"
         >
           <Plus size={20} />
           Add Money to Balance
