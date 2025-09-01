@@ -16,6 +16,7 @@ import Beauty from "./pages/Navcategories/Beauty";
 import Fashion from "./pages/Navcategories/Fashion";
 import ProfilePage from "./pages/ProfilePage";
 import Login from "./pages/Login";
+import Products from "./pages/Products";
 
 
 
@@ -42,14 +43,17 @@ const App = () => {
         <Route path="/fashion" element={<Fashion />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/productpage" element={<Products />} />
      
       </Routes>
       {!hideFooterRoutes.includes(location.pathname) && <Footer />}
       {/* <Footer /> */}
       {bottomnavRoutes.includes(location.pathname) && <BottomNav />}
-      
-    </>
-  );
-};
+      </>
+        );
+}
+   
 
-export default App;
+    export default App;
+
+  

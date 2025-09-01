@@ -243,7 +243,7 @@ const CategorySlider = () => {
     {
       id: 0,
       name: "Leafy, Herbs & Seasoning",
-      icon: "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=100&h=100&fit=crop",
+      icon: "https://cdn.zeptonow.com/production/tr:w-72,ar-192-192,pr-true,f-auto,q-80/inventory/banner/008443f2-c12a-4967-9013-acd1897a6a94.png",
       color: "green",
       data: [
         { id: 101, name: "Spinach", qty: "1 Bunch", price: 20, oldPrice: 30, image: "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=500" },
@@ -259,7 +259,7 @@ const CategorySlider = () => {
     {
       id: 1,
       name: "Exotics & Premium",
-      icon: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=100&h=100&fit=crop",
+      icon: "https://cdn.zeptonow.com/production/tr:w-72,ar-192-192,pr-true,f-auto,q-80/inventory/banner/7c937588-c90b-414e-8c08-82172e3dfa47.png",
       color: "purple",
       data: [
         { id: 201, name: "Avocado", qty: "1 Pc", price: 150, oldPrice: 200, image: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=500" },
@@ -275,7 +275,7 @@ const CategorySlider = () => {
     {
       id: 2,
       name: "Cuts & Sprouts",
-      icon: "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=100&h=100&fit=crop",
+      icon: "https://cdn.zeptonow.com/production/tr:w-72,ar-192-192,pr-true,f-auto,q-80/inventory/banner/16aab6dd-31b7-460c-bba9-d3c0143aae33.png",
       color: "orange",
       data: [
         { id: 301, name: "Bean Sprouts", qty: "250 g", price: 30, oldPrice: 40, image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500" },
@@ -291,7 +291,7 @@ const CategorySlider = () => {
     {
       id: 3,
       name: "Organics",
-      icon: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=100&h=100&fit=crop",
+      icon: "https://cdn.zeptonow.com/production/tr:w-72,ar-192-192,pr-true,f-auto,q-80/inventory/banner/982d3548-c430-40b7-8870-e026bb18f9b2.png",
       color: "green",
       data: [
         { id: 401, name: "Organic Tomato", qty: "1 Kg", price: 80, oldPrice: 100, image: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=500" },
@@ -307,7 +307,7 @@ const CategorySlider = () => {
     {
       id: 4,
       name: "Fresh Fruits",
-      icon: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=100&h=100&fit=crop",
+      icon: "https://cdn.zeptonow.com/production/tr:w-72,ar-192-192,pr-true,f-auto,q-80/inventory/banner/ab477d3c-7032-447f-ad9a-53b4aad716db.png",
       color: "orange",
       data: [
         { id: 501, name: "Apple", qty: "1 Kg", price: 120, oldPrice: 150, image: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=500" },
@@ -323,7 +323,7 @@ const CategorySlider = () => {
     {
       id: 5,
       name: "Fresh Vegetables",
-      icon: "https://images.unsplash.com/photo-1445282768818-728615cc910a?w=100&h=100&fit=crop",
+      icon: "https://cdn.zeptonow.com/production/tr:w-72,ar-192-192,pr-true,f-auto,q-80/inventory/banner/d68419b9-cd18-4f8d-8c2a-fc7258417d12.png",
       color: "green",
       data: [
         { id: 601, name: "Tomato", qty: "1 Kg", price: 45, oldPrice: 60, image: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=500" },

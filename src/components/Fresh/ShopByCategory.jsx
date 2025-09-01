@@ -10,7 +10,7 @@ const ShopByCategory = () => {
     {
       id: 2,
       bgColor: "bg-green-200",
-      src: "https://via.placeholder.com/150x100/90EE90/000000?text=Fresh+Vegetables"
+      src: "https://cdn.zeptonow.com/production/tr:w-300,ar-640-304,pr-true,f-auto,q-80/inventory/banner/61277d55-05df-4912-a227-a3bc9cb05c01.png"
     },
     {
       id: 3,
@@ -20,12 +20,12 @@ const ShopByCategory = () => {
     {
       id: 4,
       bgColor: "bg-green-200",
-      src: "https://via.placeholder.com/100x100/90EE90/000000?text=Organic"
+      src: "https://cdn.zeptonow.com/production/tr:w-300,ar-412-304,pr-true,f-auto,q-80/inventory/banner/3763d2b2-6a2c-4e02-b067-1633de29fa21.png"
     },
     {
       id: 5,
       bgColor: "bg-green-200",
-      src: "https://via.placeholder.com/100x100/90EE90/000000?text=Cut+Sprouts"
+      src: "https://cdn.zeptonow.com/production/tr:w-300,ar-412-304,pr-true,f-auto,q-80/inventory/banner/f61c0725-f6b0-4d9d-be64-10982980b072.png"
     }
   ];
 
