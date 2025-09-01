@@ -4,23 +4,23 @@ import { ChevronLeft, ChevronRight } from "lucide-react"; // arrow icons
 const FoodCategories = () => {
   const categories = [
     { id: 1, image: "https://cdn.zeptonow.com/production/tr:w-160,ar-332-412,pr-true,f-auto,q-80/inventory/banner/a9a4e615-c8aa-42c9-bf08-f4c8614168b3.png" },
-    { id: 2, image: "/path/to/your/image2.jpg" },
-    { id: 3, image: "/path/to/your/image3.jpg" },
-    { id: 4, image: "/path/to/your/image4.jpg" },
-    { id: 5, image: "/path/to/your/image5.jpg" },
-    { id: 6, image: "/path/to/your/image6.jpg" },
-    { id: 7, image: "/path/to/your/image7.jpg" },
-    { id: 8, image: "/path/to/your/image8.jpg" },
-    { id: 9, image: "/path/to/your/image9.jpg" },
-    { id: 10, image: "/path/to/your/image10.jpg" },
-    { id: 11, image: "/path/to/your/image11.jpg" },
-    { id: 12, image: "/path/to/your/image12.jpg" },
-    { id: 13, image: "/path/to/your/image13.jpg" },
-    { id: 14, image: "/path/to/your/image14.jpg" },
-    { id: 15, image: "/path/to/your/image15.jpg" },
-    { id: 16, image: "/path/to/your/image16.jpg" },
-    { id: 17, image: "/path/to/your/image17.jpg" },
-    { id: 18, image: "/path/to/your/image18.jpg" }
+    { id: 2, image: "https://cdn.zeptonow.com/production/tr:w-160,ar-332-412,pr-true,f-auto,q-80/inventory/banner/7184569d-cf3f-4e54-996e-dd52e34d58b7.png" },
+    { id: 3, image: "https://cdn.zeptonow.com/production/tr:w-160,ar-332-412,pr-true,f-auto,q-80/inventory/banner/e8009b77-79cf-4801-9ef3-de5b5cb6af1f.png" },
+    { id: 4, image: "https://cdn.zeptonow.com/production/tr:w-160,ar-332-412,pr-true,f-auto,q-80/inventory/banner/01c1836a-8317-40c0-a93d-e8f73e7c77bc.png" },
+    { id: 5, image: "https://cdn.zeptonow.com/production/tr:w-160,ar-332-412,pr-true,f-auto,q-80/inventory/banner/21062416-36f9-450d-aad0-dee47154fccc.png" },
+    { id: 6, image: "https://cdn.zeptonow.com/production/tr:w-160,ar-332-412,pr-true,f-auto,q-80/inventory/banner/6998d6df-bfc1-4506-978c-58104395cabf.png" },
+    { id: 7, image: "https://cdn.zeptonow.com/production/tr:w-160,ar-332-412,pr-true,f-auto,q-80/inventory/banner/9de2fb1d-1063-49c9-a180-7f0fff25508c.png" },
+    { id: 8, image: "https://cdn.zeptonow.com/production/tr:w-160,ar-332-412,pr-true,f-auto,q-80/inventory/banner/c798236e-cdf5-43bd-a32d-8f9b03a5e0a6.png" },
+    { id: 9, image: "https://cdn.zeptonow.com/production/tr:w-160,ar-332-412,pr-true,f-auto,q-80/inventory/banner/3d0f65aa-9272-494a-b394-dbf07068aad3.png" },
+    { id: 10, image: "https://cdn.zeptonow.com/production/tr:w-160,ar-356-435,pr-true,f-auto,q-80/inventory/banner/e63b6d81-e6b4-4268-bbb5-1fbee68111eb.png" },
+    { id: 11, image: "https://cdn.zeptonow.com/production/tr:w-160,ar-332-412,pr-true,f-auto,q-80/inventory/banner/7da19bef-7a98-4a04-bdde-5f3fb653881a.png" },
+    { id: 12, image: "https://cdn.zeptonow.com/production/tr:w-160,ar-333-412,pr-true,f-auto,q-80/inventory/banner/c8528c5c-b678-436b-befd-49557c9d2856.png" },
+    { id: 13, image: "https://cdn.zeptonow.com/production/tr:w-160,ar-333-412,pr-true,f-auto,q-80/inventory/banner/94a86a07-7393-4678-bf9a-b7b320e43ff4.png" },
+    { id: 14, image: "https://cdn.zeptonow.com/production/tr:w-160,ar-333-422,pr-true,f-auto,q-80/inventory/banner/1e8e7903-5fbb-43c6-876f-de21f6ddfc0d.png" },
+    { id: 15, image: "https://cdn.zeptonow.com/production/tr:w-160,ar-333-412,pr-true,f-auto,q-80/inventory/banner/3ba3942b-7bb7-4d6a-86b9-7332aa1369ca.png" },
+    { id: 16, image: "https://cdn.zeptonow.com/production/tr:w-160,ar-332-412,pr-true,f-auto,q-80/inventory/banner/cab8374a-78a2-4e3e-9149-94ff8e21b485.png" },
+    { id: 17, image: "https://cdn.zeptonow.com/production/tr:w-160,ar-332-416,pr-true,f-auto,q-80/inventory/banner/e89010d7-056b-435e-89fd-ecc78a377fa1.png" },
+    { id: 18, image: "https://cdn.zeptonow.com/production/tr:w-160,ar-332-412,pr-true,f-auto,q-80/inventory/banner/dc161f7f-5018-4ab5-a6d1-4f92e89e9654.png" }
   ];
 
   const scrollRef = useRef(null);

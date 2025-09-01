@@ -8,7 +8,9 @@ import HowItWorks from '../../components/Home/HowItWorks'
 import PopularCategories from '../../components/Home/PopularCategories'
 import Banner from '../../components/Cafe/Banner'
 import FoodCategories from '../../components/Cafe/FoodCategories'
-
+import Meals from '../../components/Cafe/Meals'
+import Under99 from '../../components/Cafe/Under99'
+import FingerFood from '../../components/Cafe/FingerFood'
 const Cafe = () => {
   return (
     <div>
@@ -19,6 +21,9 @@ const Cafe = () => {
       <BestSeller/>
       <SnackTime />
       <BreakfastChai/>
+      <Meals/>
+      <Under99/>
+      <FingerFood/>
       < HowItWorks/>
       < PopularCategories/>
     </div>

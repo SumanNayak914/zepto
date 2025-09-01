@@ -15,13 +15,14 @@ import Mobiles from "./pages/Navcategories/Mobiles";
 import Beauty from "./pages/Navcategories/Beauty";
 import Fashion from "./pages/Navcategories/Fashion";
 import ProfilePage from "./pages/ProfilePage";
+import Login from "./pages/Login";
 
 
 
 const App = () => {
   const location = useLocation();
-  const hideHeaderRoutes = ["/category", "/deals", "/cart"];
-  const hideFooterRoutes = ["/deals", "/cart", "/profile"];
+  const hideHeaderRoutes = ["/category", "/deals", "/cart","/login"];
+  const hideFooterRoutes = ["/deals", "/cart", "/profile","/login"];
   const bottomnavRoutes = ["/", "/deals", "/cart", "/profile","/toy","/fresh","/electronics","/mobiles","/beauty","/fashion","/cafe"];
   return (
     <>
@@ -40,6 +41,7 @@ const App = () => {
         <Route path="/beauty" element={<Beauty />} />
         <Route path="/fashion" element={<Fashion />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/login" element={<Login />} />
      
       </Routes>
       {!hideFooterRoutes.includes(location.pathname) && <Footer />}

@@ -10,6 +10,7 @@ import Categories from '../components/Home/Categories'
 import MobilePromoSlider from '../components/Home/MobilePromoSlider'
 import RecipeSlider from '../components/Home/RecipeSlider'
 import Asss from '../components/Home/Asss'
+import SnackTime from '../components/Cafe/SnackTime '
 const Home = () => {
   return (
     <div>
@@ -19,6 +20,7 @@ const Home = () => {
       < MobilePromoSlider/>
       <ProductSlider/>
       < ExploreMore/>
+      <SnackTime/>
       < Categories/>
       < RecipeSlider/>
       < Asss/>

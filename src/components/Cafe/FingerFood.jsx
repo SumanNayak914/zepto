@@ -1,86 +1,65 @@
 import React, { useState } from "react";
 
-const SnackTime = () => {
+const FingerFood = () => {
   const [showAll, setShowAll] = useState(false);
   const [addedItems, setAddedItems] = useState({});
 
+  // Finger Food Products
   const products = [
     {
       id: 1,
-      name: "Khao Suey Maggi",
-      qty: "300 gm",
-      price: 199,
-      image: "https://cdn.zeptonow.com/production/tr:w-403,ar-4418-4418,pr-true,f-auto,q-80/cms/product_variant/6cdc01ad-eccc-4aa5-8297-fbad7e7d7912.jpg",
+      name: "Chicken Tandoori Momos",
+      qty: "6 pieces",
+      price: 159,
+      oldPrice: 399,
+      image: "https://cdn.zeptonow.com/production/tr:w-403,ar-4318-4318,pr-true,f-auto,q-80/cms/product_variant/693055b3-9e4e-46f8-b963-d88d35ce35f9.jpeg",
     },
     {
       id: 2,
-      name: "Butter Chicken Steamed Bao",
-      qty: "2 pieces",
-      price: 129,
-      image: "https://cdn.zeptonow.com/production/tr:w-403,ar-5198-5198,pr-true,f-auto,q-80/cms/product_variant/8bb09df1-c095-475d-8aed-c0be55a175da.jpeg",
+      name: "Veg Tandoori Momos  ",
+      qty: "6 Pieces",
+      price: 149,
+      oldPrice: 249,
+      image: "https://cdn.zeptonow.com/production/tr:w-403,ar-4318-4318,pr-true,f-auto,q-80/cms/product_variant/e983c62e-ee68-4443-b768-5a7960d05a64.jpeg",
     },
     {
       id: 3,
-      name: "Chicken Tikka Sandwich",
-      qty: "2 serves",
-      price: 169,
-      image: "https://cdn.zeptonow.com/production/tr:w-403,ar-3403-3403,pr-true,f-auto,q-80/cms/product_variant/4b77d28d-1aa0-4671-81db-bce5fda2426a.jpeg",
+      name: "Butter Chicken Steamed Bao",
+      qty: "2 pieces",
+      price: 129,
+      oldPrice: 299,
+      image: "https://cdn.zeptonow.com/production/tr:w-403,ar-5198-5198,pr-true,f-auto,q-80/cms/product_variant/8bb09df1-c095-475d-8aed-c0be55a175da.jpeg",
     },
     {
       id: 4,
-      name: "Butter Popcorn Bag",
+      name: "Chicken Shawarma Roti",
+      qty: "3 Pieces",
+      price: 179,
+      oldPrice: 259,
+      image: "https://cdn.zeptonow.com/production/tr:w-403,ar-2400-2400,pr-true,f-auto,q-80/cms/product_variant/b354a4d2-ffc7-4216-b92e-fc91a07453d9.jpeg",
+    },
+    {
+      id: 5,
+      name: "Butter Chicken",
       qty: "Serve 1",
-      price: 99,
-      image: "https://cdn.zeptonow.com/production/tr:w-403,ar-2400-2400,pr-true,f-auto,q-80/cms/product_variant/3d9adf43-3522-4d78-974e-4dfa0626e1bd.jpeg",
+      price: 159,
+      oldPrice: 229,
+      image: "https://cdn.zeptonow.com/production/tr:w-403,ar-4579-4579,pr-true,f-auto,q-80/cms/product_variant/c64cab0a-4c25-40d3-87ea-964fb8533920.jpeg",
     },
     {
       id: 5,
       name: "Chicken Shawarma Sandwich",
-      qty: "Searve 1",
-      price: 179,
+      qty: "Serve 1",
+      price: 159,
+      oldPrice: 229,
       image: "https://cdn.zeptonow.com/production/tr:w-403,ar-2400-2400,pr-true,f-auto,q-80/cms/product_variant/38f024c6-0e9d-457e-972c-b8d2a62a9520.jpeg",
-    },
-    {
-      id: 6,
-      name: "Butter Popcorn Tub",
-      qty: "100g",
-      price: 159,
-      image: "https://cdn.zeptonow.com/production/tr:w-403,ar-4772-4772,pr-true,f-auto,q-80/cms/product_variant/8b46b17b-a360-4f0a-9ba9-b7ef2c55ab18.jpeg",
-    },
-    {
-      id: 7,
-      name: "Chicken Tandoori Momos",
-      qty: "5 Pc",
-      price: 159,
-      image: "https://cdn.zeptonow.com/production/tr:w-403,ar-4318-4318,pr-true,f-auto,q-80/cms/product_variant/693055b3-9e4e-46f8-b963-d88d35ce35f9.jpeg",
-    },
-    {
-      id: 8,
-      name: "Chicken Seekh Kebab   ",
-      qty: "2 Pc",
-      price: 159,
-      image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1024-1024,pr-true,f-auto,q-80/cms/product_variant/b809da8e-ac6a-4efa-84af-e6046c100c17.jpeg",
-    },
-    {
-      id: 9,
-      name: "Chole Samose ",
-      qty: "1 Portion",
-      price: 149,
-      image: "https://cdn.zeptonow.com/production/tr:w-403,ar-5198-5198,pr-true,f-auto,q-80/cms/product_variant/1b66e21a-e02c-4e6e-bf1f-e3507b1ee055.jpeg",
-    },
-    {
-      id: 10,
-      name: "Samosa - 2 Pieces",
-      qty: "2 Pc",
-      price: 59,
-      image: "https://cdn.zeptonow.com/production/tr:w-403,ar-5071-5071,pr-true,f-auto,q-80/cms/product_variant/3cb4b86c-5abc-460b-8d9d-98a74a67b2a0.jpeg",
     },
   ];
 
   const handleAddClick = (itemId) => {
-    setAddedItems(prev => ({
+    setAddedItems((prev) => ({
       ...prev,
-      [itemId]: !prev[itemId]
+      [itemId]: !prev[itemId],
     }));
   };
 
@@ -91,18 +70,17 @@ const SnackTime = () => {
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <h2 className="text-2xl md:text-3xl font-bold text-left mb-6 text-gray-800">
-          Snack Time
+          Finger Food
         </h2>
 
-        {/* Mobile Grid Layout (3x2 = 6 products visible initially) */}
+        {/* Mobile Grid Layout */}
         <div className="block md:hidden">
           <div className="grid grid-cols-3 gap-3 mb-4">
             {visibleProducts.map((item) => (
               <div
                 key={item.id}
-                className="bg-white rounded-lg  relative overflow-hidden"
+                className="bg-white rounded-lg relative overflow-hidden"
               >
-                {/* Image square */}
                 <div className="w-full aspect-square overflow-hidden">
                   <img
                     src={item.image}
@@ -111,53 +89,58 @@ const SnackTime = () => {
                   />
                 </div>
 
-                {/* Content */}
                 <div className="p-2">
-                  <p className="font-medium text-xs mb-1 leading-tight">{item.name}</p>
+                  <p className="font-medium text-xs mb-1 leading-tight">
+                    {item.name}
+                  </p>
                   <p className="text-gray-500 text-xs mb-1">{item.qty}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm font-bold text-green-600">₹{item.price}</span>
+                    <span className="text-sm font-bold text-green-600">
+                      ₹{item.price}
+                    </span>
+                    <span className="line-through text-gray-400 text-xs">
+                      ₹{item.oldPrice}
+                    </span>
                   </div>
                 </div>
 
-                {/* ADD/ADDED Button */}
                 <button
                   onClick={() => handleAddClick(item.id)}
                   className={`absolute bottom-1 right-1 px-2 py-1 rounded-full text-xs font-bold transition-all duration-200 ${
                     addedItems[item.id]
-                      ? 'bg-green-500 text-white border border-green-500'
-                      : 'bg-white border border-pink-500 text-pink-500 hover:bg-pink-50'
+                      ? "bg-green-500 text-white border border-green-500"
+                      : "bg-white border border-pink-500 text-pink-500 hover:bg-pink-50"
                   }`}
                 >
-                  {addedItems[item.id] ? '✓' : 'ADD'}
+                  {addedItems[item.id] ? "✓" : "ADD"}
                 </button>
               </div>
             ))}
           </div>
 
-          {/* See All / Show Less Button for Mobile */}
           {products.length > 6 && (
             <div className="text-center">
               <button
                 onClick={() => setShowAll(!showAll)}
                 className="bg-pink-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-pink-600 transition-colors"
               >
-                {showAll ? 'Show Less' : `See All (${products.length - 6} more)`}
+                {showAll
+                  ? "Show Less"
+                  : `See All (${products.length - 6} more)`}
               </button>
             </div>
           )}
         </div>
 
-        {/* Desktop/Tablet Horizontal Scroll - 7 products visible */}
+        {/* Desktop/Tablet Horizontal Scroll */}
         <div className="hidden md:block">
           <div className="flex gap-4 overflow-x-auto no-scrollbar pb-4">
             {products.map((item) => (
               <div
                 key={item.id}
-                className="min-w-[120px] max-w-[140px] bg-white rounded-lg  relative flex-shrink-0"
+                className="min-w-[120px] max-w-[140px] bg-white rounded-lg relative flex-shrink-0"
               >
-                {/* Image square */}
-                <div className="w-full aspect-square overflow-hidden rounded-lg ">
+                <div className="w-full aspect-square overflow-hidden rounded-lg">
                   <img
                     src={item.image}
                     alt={item.name}
@@ -165,32 +148,34 @@ const SnackTime = () => {
                   />
                 </div>
 
-                {/* Content */}
                 <div className="p-2">
                   <p className="font-medium text-xs mb-1">{item.name}</p>
                   <p className="text-gray-500 text-xs mb-1">{item.qty}</p>
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-sm font-bold text-green-600">₹{item.price}</span>
+                    <span className="text-sm font-bold text-green-600">
+                      ₹{item.price}
+                    </span>
+                    <span className="line-through text-gray-400 text-xs">
+                      ₹{item.oldPrice}
+                    </span>
                   </div>
                 </div>
 
-                {/* ADD/ADDED Button */}
                 <button
                   onClick={() => handleAddClick(item.id)}
                   className={`absolute bottom-2 right-2 px-2 py-1 rounded-full text-xs font-bold transition-all duration-200 ${
                     addedItems[item.id]
-                      ? 'bg-green-500 text-white border border-green-500'
-                      : 'bg-white border border-pink-500 text-pink-500 hover:bg-pink-50'
+                      ? "bg-green-500 text-white border border-green-500"
+                      : "bg-white border border-pink-500 text-pink-500 hover:bg-pink-50"
                   }`}
                 >
-                  {addedItems[item.id] ? 'ADDED' : 'ADD'}
+                  {addedItems[item.id] ? "ADDED" : "ADD"}
                 </button>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Custom CSS for hiding scrollbar */}
         <style jsx>{`
           .no-scrollbar {
             -ms-overflow-style: none;
@@ -205,4 +190,4 @@ const SnackTime = () => {
   );
 };
 
-export default SnackTime;
+export default FingerFood;
