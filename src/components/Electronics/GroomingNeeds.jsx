@@ -143,15 +143,15 @@ const GroomingNeed = () => {
 
         <div className="flex justify-between items-center mb-8">
           <div className="flex items-center gap-3">
-            <h1 className="text-4xl md:text-5xl font-bold text-black">Grooming Needs</h1>
-            <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
+            <h1 className="text-xl md:text-3xl font-bold text-black ">Grooming Needs</h1>
+            <div className="w-8 h-8   md:w-12 md:h-12 bg-pink-100 rounded-full flex items-center justify-center">
               <span className="text-2xl">🪒</span>
             </div>
           </div>
-          <button className="flex items-center gap-2 bg-white px-6 py-3 rounded-full shadow-md border-2 border-gray-300 font-bold hover:shadow-lg transition-all whitespace-nowrap">
-  <span className="text-gray-800">See All</span>
-  <span className="text-gray-600">›</span>
-</button>
+           <button className="flex items-center gap-2 bg-white px-2  md:px-3  rounded-full shadow-sm  border-1 border-gray-300 hover:shadow-md transition-shadow">
+            <span className="font-bold text-gray-800">See All</span>
+            <span className="text-gray-600 text-2xl md:text-3xl pb-2">›</span>
+          </button>
 
         </div>
 

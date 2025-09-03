@@ -7,44 +7,44 @@ const MultiCategorySlider = () => {
     { id: 1, name: "Apple", qty: "1 Kg", price: 120, oldPrice: 150, image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500" },
     { id: 2, name: "Banana", qty: "1 Dozen", price: 40, oldPrice: 50, image: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=500" },
     { id: 3, name: "Orange", qty: "1 Kg", price: 80, oldPrice: 100, image: "https://images.unsplash.com/photo-1547514701-42782101795e?w=500" },
-    { id: 4, name: "Mango", qty: "1 Kg", price: 150, oldPrice: 180, image: "https://images.unsplash.com/photo-1553279768-865429fa0078?w=500" },
-    { id: 5, name: "Grapes", qty: "500 g", price: 90, oldPrice: 120, image: "https://images.unsplash.com/photo-1537640538966-79f369143b8f?w=500" },
+    { id: 4, name: "Mango", qty: "1 Kg", price: 150, oldPrice: 180, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/c5768310-05ea-440e-afec-d96fad90780b.png" },
+    { id: 5, name: "Grapes", qty: "500 g", price: 90, oldPrice: 120, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/0bed6ca3-3132-4e18-9f34-2a6fb46102c1.png" },
     { id: 6, name: "Strawberry", qty: "250 g", price: 200, oldPrice: 250, image: "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=500" },
-    { id: 7, name: "Pomegranate", qty: "1 Kg", price: 180, oldPrice: 220, image: "https://images.unsplash.com/photo-1553979459-d2229ba7433a?w=500" },
-    { id: 8, name: "Watermelon", qty: "1 Pc", price: 60, oldPrice: 80, image: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=500" },
+    { id: 7, name: "Pomegranate", qty: "1 Kg", price: 180, oldPrice: 220, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/fd9126ec-ddc8-4d8d-93f2-4c7935ec46fd.png" },
+    { id: 8, name: "Watermelon", qty: "1 Pc", price: 60, oldPrice: 80, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/afaa92b2-1a1a-4f0c-847b-28578fe3d9c1.png" },
   ];
 
   const leafyHerbsSeasoning = [
     { id: 101, name: "Spinach", qty: "1 Bunch", price: 20, oldPrice: 30, image: "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=500" },
-    { id: 102, name: "Mint", qty: "1 Bunch", price: 15, oldPrice: 25, image: "https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?w=500" },
-    { id: 103, name: "Coriander", qty: "1 Bunch", price: 15, oldPrice: 20, image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=500" },
-    { id: 104, name: "Fenugreek", qty: "1 Bunch", price: 25, oldPrice: 35, image: "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=500" },
-    { id: 105, name: "Basil", qty: "1 Bunch", price: 30, oldPrice: 40, image: "https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?w=500" },
-    { id: 106, name: "Oregano", qty: "50 g", price: 80, oldPrice: 100, image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=500" },
-    { id: 107, name: "Thyme", qty: "50 g", price: 90, oldPrice: 120, image: "https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?w=500" },
-    { id: 108, name: "Rosemary", qty: "50 g", price: 85, oldPrice: 110, image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=500" },
+    { id: 102, name: "Mint", qty: "1 Bunch", price: 15, oldPrice: 25, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/f20bf9d3-fe3b-4339-a25d-c8ce092280e2.png" },
+    { id: 103, name: "Coriander", qty: "1 Bunch", price: 15, oldPrice: 20, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/b77455ba-c381-4c8a-b170-fe65e5c664fb.png" },
+    { id: 104, name: "Fenugreek", qty: "1 Bunch", price: 25, oldPrice: 35, image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1200-1200,pr-true,f-auto,q-80/cms/product_variant/d24f4557-872b-45c1-9a36-bedc8b8f1f5c.jpeg" },
+    { id: 105, name: "Basil", qty: "1 Bunch", price: 30, oldPrice: 40, image:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/a8e3395a-19df-4cec-8de1-8b754a8d3206.png" },
+    { id: 106, name: "Oregano", qty: "50 g", price: 80, oldPrice: 100, image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1063-1063,pr-true,f-auto,q-80/cms/product_variant/8b807e23-0113-4167-8e1f-43ab94afd2d0.jpeg" },
+    { id: 107, name: "Thyme", qty: "50 g", price: 90, oldPrice: 120, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/9ecc58ca-7324-4cfd-9a0a-5579918fea7e.png" },
+    { id: 108, name: "Rosemary", qty: "50 g", price: 85, oldPrice: 110, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/ba246f2b-a312-4db4-9e0b-d72d6d42808e.png" },
   ];
 
   const exoticsPremium = [
     { id: 201, name: "Avocado", qty: "1 Pc", price: 150, oldPrice: 200, image: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=500" },
-    { id: 202, name: "Dragon Fruit", qty: "1 Pc", price: 180, oldPrice: 220, image: "https://images.unsplash.com/photo-1526318472351-c75fcf070305?w=500" },
+    { id: 202, name: "Dragon Fruit", qty: "1 Pc", price: 180, oldPrice: 220, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/a285c923-5a02-459d-b4ca-51cec43ce9b6.png" },
     { id: 203, name: "Kiwi", qty: "4 Pcs", price: 120, oldPrice: 160, image: "https://images.unsplash.com/photo-1585059895524-72359e06133a?w=500" },
     { id: 204, name: "Blueberry", qty: "125 g", price: 300, oldPrice: 380, image: "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?w=500" },
     { id: 205, name: "Cherry", qty: "250 g", price: 400, oldPrice: 500, image: "https://images.unsplash.com/photo-1528821128474-27f963b062bf?w=500" },
-    { id: 206, name: "Asparagus", qty: "250 g", price: 250, oldPrice: 300, image: "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=500" },
-    { id: 207, name: "Zucchini", qty: "500 g", price: 80, oldPrice: 100, image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500" },
+    { id: 206, name: "Asparagus", qty: "250 g", price: 250, oldPrice: 300, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/9a5dcf7c-6ebb-4794-bcf1-a8a2a40e69a6.png" },
+    { id: 207, name: "Zucchini", qty: "500 g", price: 80, oldPrice: 100, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/e937ba2b-ebab-46e3-9fa5-0e295d879967.png" },
     { id: 208, name: "Baby Corn", qty: "250 g", price: 60, oldPrice: 80, image: "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=500" },
   ];
 
   const plantsFlowers = [
-    { id: 301, name: "Rose Plant", qty: "1 Pot", price: 150, oldPrice: 200, image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=500" },
-    { id: 302, name: "Marigold", qty: "1 Pot", price: 80, oldPrice: 100, image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=500" },
-    { id: 303, name: "Jasmine", qty: "1 Pot", price: 120, oldPrice: 150, image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=500" },
-    { id: 304, name: "Tulsi Plant", qty: "1 Pot", price: 100, oldPrice: 130, image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=500" },
-    { id: 305, name: "Money Plant", qty: "1 Pot", price: 90, oldPrice: 120, image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=500" },
-    { id: 306, name: "Cactus", qty: "1 Pot", price: 70, oldPrice: 90, image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=500" },
-    { id: 307, name: "Succulent", qty: "1 Pot", price: 60, oldPrice: 80, image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=500" },
-    { id: 308, name: "Aloe Vera", qty: "1 Pot", price: 80, oldPrice: 100, image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=500" },
+    { id: 301, name: "Rose Plant", qty: "1 Pot", price: 150, oldPrice: 200, image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1080-1737,pr-true,f-auto,q-80/cms/product_variant/76493a66-d7c5-4e38-8a7e-32e31d0fd768.jpeg" },
+    { id: 302, name: "Marigold", qty: "1 Pot", price: 80, oldPrice: 100, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/058b1565-52db-435d-80db-8a8e0da96576.png" },
+    { id: 303, name: "Jasmine", qty: "1 Pot", price: 120, oldPrice: 150, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/834f4709-e215-4e95-ace3-7ab68054fd8d.png" },
+    { id: 304, name: "Tulsi Plant", qty: "1 Pot", price: 100, oldPrice: 130, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/d5d6004e-592b-4ee4-b0a9-7ccc478935d0.png" },
+    { id: 305, name: "Money Plant", qty: "1 Pot", price: 90, oldPrice: 120, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/de5c5fb8-1be4-4fea-aa76-65672c8bec92.png" },
+    { id: 306, name: "Cactus", qty: "1 Pot", price: 70, oldPrice: 90, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/61092184-7ed9-4ca9-9a0b-068e4ecef239.png" },
+    { id: 307, name: "Succulent", qty: "1 Pot", price: 60, oldPrice: 80, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/3abb076a-680b-4b3a-b52f-e4a804ba8835.png" },
+    { id: 308, name: "Aloe Vera", qty: "1 Pot", price: 80, oldPrice: 100, image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQMs4UK_52tWtAXb8Du3_u0G87hrGn50KbjFQTNcVm0EqfdzipJv00UNM1v1__Uq2v9tjBETBokZDbDb9Uf_8803nlrnWW2fO7d4BMnE5Sh" },
   ];
 
   const categories = [

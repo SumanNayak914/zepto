@@ -1,135 +1,151 @@
 import React, { useState } from "react";
 
-const Kitchen = () => {
+const HomeAccessories = () => {
   const [addedItems, setAddedItems] = useState({});
   const [activeCategory, setActiveCategory] = useState(0);
 
   const categories = [
     {
       id: 0,
-      name: "Juicers & Mixers",
-      icon: "🥤",
+      name: "Home Cleaning",
+      icon: "🧹",
       color: "pink",
       data: [
         { 
           id: 101, 
-          name: "Bajaj Pluto Mixer", 
+          name: "Floor Mop", 
           qty: "1 pc", 
-          price: 2299, 
-          oldPrice: 4125, 
-          image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=300&fit=crop"
+          price: 499, 
+          oldPrice: 799, 
+          image: "https://images.unsplash.com/photo-1600172454284-d4b1f79fa0fc?w=300&h=300&fit=crop"
         },
         { 
           id: 102, 
-          name: "Philips Juicer", 
-          qty: "1 pc", 
-          price: 1899, 
-          oldPrice: 2999, 
-          image: "https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=300&h=300&fit=crop"
-        },
-        { 
-          id: 103, 
-          name: "Preethi Mixer", 
-          qty: "1 pc", 
-          price: 3299, 
-          oldPrice: 5199, 
-          image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=300&fit=crop"
+          name: "Cleaning Brush Set", 
+          qty: "1 set", 
+          price: 299, 
+          oldPrice: 599, 
+          image: "https://images.unsplash.com/photo-1616628182501-fc9e3ea364ab?w=300&h=300&fit=crop"
         }
       ]
     },
     {
       id: 1,
-      name: "Electric Cookware",
-      icon: "🍳",
+      name: "Storage & Organizers",
+      icon: "🗄️",
       color: "orange",
       data: [
         { 
           id: 201, 
-          name: "Electric Kettle", 
+          name: "Plastic Storage Box", 
           qty: "1 pc", 
-          price: 899, 
+          price: 799, 
           oldPrice: 1299, 
-          image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=300&h=300&fit=crop"
+          image: "https://images.unsplash.com/photo-1616628196625-bf27c65c1a01?w=300&h=300&fit=crop"
         },
         { 
           id: 202, 
-          name: "Electric Cooker", 
+          name: "Wardrobe Organizer", 
           qty: "1 pc", 
-          price: 1199, 
-          oldPrice: 1899, 
-          image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=300&fit=crop"
+          price: 999, 
+          oldPrice: 1499, 
+          image: "https://images.unsplash.com/photo-1622537407846-70a63e32d65d?w=300&h=300&fit=crop"
         }
       ]
     },
     {
       id: 2,
-      name: "Toasters",
-      icon: "🍞",
+      name: "Home Decor",
+      icon: "🪞",
       color: "purple",
       data: [
         { 
           id: 301, 
-          name: "Pop Up Toaster", 
+          name: "Wall Clock", 
           qty: "1 pc", 
-          price: 1599, 
-          oldPrice: 2299, 
-          image: "https://images.unsplash.com/photo-1506368249639-73a05d6f6488?w=300&h=300&fit=crop"
+          price: 1199, 
+          oldPrice: 1999, 
+          image: "https://images.unsplash.com/photo-1582719471137-c3967ffb1c6d?w=300&h=300&fit=crop"
         },
         { 
           id: 302, 
-          name: "Auto Toaster", 
+          name: "Decorative Vase", 
           qty: "1 pc", 
-          price: 2199, 
-          oldPrice: 3199, 
-          image: "https://images.unsplash.com/photo-1506368249639-73a05d6f6488?w=300&h=300&fit=crop"
+          price: 699, 
+          oldPrice: 1099, 
+          image: "https://images.unsplash.com/photo-1600494447044-81a2e508d57c?w=300&h=300&fit=crop"
         }
       ]
     },
     {
       id: 3,
-      name: "Coffee Maker",
-      icon: "☕",
+      name: "Lighting",
+      icon: "💡",
       color: "green",
       data: [
         { 
           id: 401, 
-          name: "Coffee Maker", 
+          name: "LED Table Lamp", 
           qty: "1 pc", 
-          price: 2899, 
-          oldPrice: 4199, 
-          image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=300&h=300&fit=crop"
+          price: 899, 
+          oldPrice: 1599, 
+          image: "https://images.unsplash.com/photo-1582719366764-ef042f2e88a3?w=300&h=300&fit=crop"
         },
         { 
           id: 402, 
-          name: "Instant Pot", 
-          qty: "1 pc", 
-          price: 3999, 
-          oldPrice: 5999, 
-          image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=300&h=300&fit=crop"
+          name: "Decorative String Lights", 
+          qty: "1 set", 
+          price: 499, 
+          oldPrice: 899, 
+          image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=300&h=300&fit=crop"
         }
       ]
     },
     {
       id: 4,
-      name: "Kettles & Egg Boilers",
-      icon: "🥚",
+      name: "Tools & Hardware",
+      icon: "🛠️",
       color: "blue",
       data: [
         { 
           id: 501, 
-          name: "Hand Blender", 
-          qty: "1 pc", 
-          price: 1519, 
-          oldPrice: 2100, 
-          image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=300&fit=crop"
+          name: "Screwdriver Kit", 
+          qty: "1 set", 
+          price: 599, 
+          oldPrice: 999, 
+          image: "https://images.unsplash.com/photo-1566837945700-30057527ade0?w=300&h=300&fit=crop"
         },
         { 
           id: 502, 
-          name: "Electric Kettle", 
+          name: "Hammer", 
           qty: "1 pc", 
-          price: 799, 
-          oldPrice: 1299, 
-          image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=300&h=300&fit=crop"
+          price: 349, 
+          oldPrice: 599, 
+          image: "https://images.unsplash.com/photo-1616628262650-057d8a5c6d3c?w=300&h=300&fit=crop"
+        }
+      ]
+    },
+    {
+      id: 5,
+      name: "Curtains & Carpets",
+      icon: "🪟",
+      color: "purple",
+      data: [
+        { 
+          id: 601, 
+          name: "Window Curtains", 
+          qty: "1 set", 
+          price: 1599, 
+          oldPrice: 2299, 
+          image: "https://images.unsplash.com/photo-1625314897518-c44a1ef54eab?w=300&h=300&fit=crop"
+        },
+        { 
+          id: 602, 
+          name: "Living Room Carpet", 
+          qty: "1 pc", 
+          price: 2499, 
+          oldPrice: 3599, 
+          image: "https://images.unsplash.com/photo-1625315289284-63bc1f0c9af5?w=300&h=300&fit=crop"
         }
       ]
     }
@@ -177,12 +193,12 @@ const Kitchen = () => {
         
         <div className="flex justify-between items-center mb-8">
           <div className="flex items-center gap-3">
-            <h1 className="text-xl md:text-3xl font-bold text-black">Kitchen</h1>
+            <h1 className="text-xl md:text-3xl font-bold text-black">Home Accessories</h1>
             <div className="w-8 h-8 md:w-12 md:h-12 bg-yellow-100 rounded-full flex items-center justify-center">
-              <span className="text-2xl">🥤</span>
+              <span className="text-2xl">🧹</span>
             </div>
           </div>
-          <button className="flex items-center gap-2 bg-white px-2  md:px-3  rounded-full shadow-sm  border-1 border-gray-300 hover:shadow-md transition-shadow">
+          <button className="flex items-center gap-2 bg-white px-2 md:px-3 rounded-full shadow-sm border-1 border-gray-300 hover:shadow-md transition-shadow">
             <span className="font-bold text-gray-800">See All</span>
             <span className="text-gray-600 text-2xl md:text-3xl pb-2">›</span>
           </button>
@@ -288,4 +304,4 @@ const Kitchen = () => {
   );
 };
 
-export default Kitchen;
+export default HomeAccessories;

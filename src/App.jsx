@@ -17,6 +17,7 @@ import Fashion from "./pages/Navcategories/Fashion";
 import ProfilePage from "./pages/ProfilePage";
 import Login from "./pages/Login";
 import Products from "./pages/Products";
+import Homecategory from "./pages/Navcategories/Homecategory";
 
 
 
@@ -34,7 +35,7 @@ const App = () => {
         <Route path="/dealstore" element={<DealStore />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/cafe" element={<Cafe />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<Homecategory />} />
         <Route path="/toy" element={<Toy />} />
         <Route path="/fresh" element={<Fresh />} />
         <Route path="/electronics" element={<Electronics />} />

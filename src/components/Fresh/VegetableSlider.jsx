@@ -5,21 +5,21 @@ const VegetableSlider = () => {
   const [addedItems, setAddedItems] = useState({});
 
   const vegetables = [
-    { id: 1, name: "Tomato", qty: "1 Kg", price: 45, oldPrice: 60, image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500" },
-    { id: 2, name: "Potato", qty: "1 Kg", price: 30, oldPrice: 40, image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500" },
-    { id: 3, name: "Onion", qty: "1 Kg", price: 35, oldPrice: 50, image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500" },
-    { id: 4, name: "Carrot", qty: "500 g", price: 25, oldPrice: 35, image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500" },
-    { id: 5, name: "Cauliflower", qty: "1 Pc", price: 40, oldPrice: 55, image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500" },
-    { id: 6, name: "Broccoli", qty: "250 g", price: 60, oldPrice: 80, image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500" },
-    { id: 7, name: "Spinach", qty: "1 Bunch", price: 20, oldPrice: 30, image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500" },
-    { id: 8, name: "Capsicum", qty: "500 g", price: 50, oldPrice: 65, image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500" },
-    { id: 9, name: "Cucumber", qty: "1 Kg", price: 35, oldPrice: 45, image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500" },
-    { id: 10, name: "Brinjal", qty: "1 Kg", price: 40, oldPrice: 55, image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500" },
-    { id: 11, name: "Beans", qty: "500 g", price: 35, oldPrice: 50, image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500" },
-    { id: 12, name: "Peas", qty: "500 g", price: 55, oldPrice: 70, image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500" },
-    { id: 13, name: "Ginger", qty: "250 g", price: 30, oldPrice: 40, image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500" },
-    { id: 14, name: "Garlic", qty: "250 g", price: 35, oldPrice: 50, image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500" },
-    { id: 15, name: "Mushroom", qty: "200 g", price: 70, oldPrice: 90, image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500" },
+    { id: 1, name: "Tomato", qty: "1 Kg", price: 45, oldPrice: 60, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/4ea129f5-d31b-4c96-8825-3680f77f4c5c.png" },
+    { id: 2, name: "Potato", qty: "1 Kg", price: 30, oldPrice: 40, image: "https://cdn.zeptonow.com/production/tr:w-403,ar-3000-3000,pr-true,f-auto,q-80/cms/product_variant/d544e910-2ee7-44ab-b3a4-7a0b48e37de4.jpeg" },
+    { id: 3, name: "Onion", qty: "1 Kg", price: 35, oldPrice: 50, image: "https://cdn.zeptonow.com/production/tr:w-403,ar-3000-3000,pr-true,f-auto,q-80/cms/product_variant/74325fc4-5b13-4bbb-98a8-cd25df7167e6.jpeg" },
+    { id: 4, name: "Carrot", qty: "500 g", price: 25, oldPrice: 35, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/00f0d26a-7b61-4e84-8903-abed0e2c4f69.png" },
+    { id: 5, name: "Cauliflower", qty: "1 Pc", price: 40, oldPrice: 55, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/9cb3146c-eaf7-434d-9743-99708a9d9b15.png" },
+    { id: 6, name: "Broccoli", qty: "250 g", price: 60, oldPrice: 80, image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1200-1200,pr-true,f-auto,q-80/cms/product_variant/b1ee4ed5-9953-433e-b88c-11b0f85a805a.jpg" },
+    { id: 7, name: "Spinach", qty: "1 Bunch", price: 20, oldPrice: 30, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/27edc027-ff1a-45aa-a0f6-837d214bad78.png" },
+    { id: 8, name: "Capsicum", qty: "500 g", price: 50, oldPrice: 65, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/4d24ce65-de90-4b2c-93a9-d1a564aa2b5d.png" },
+    { id: 9, name: "Cucumber", qty: "1 Kg", price: 35, oldPrice: 45, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/e29ff4ab-7a96-4b90-b251-0489fa0416a2.png" },
+    { id: 10, name: "Brinjal", qty: "1 Kg", price: 40, oldPrice: 55, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/49ac30ac-04bd-4e2e-b4bd-84f3594fe2ed.png" },
+    { id: 11, name: "Beans", qty: "500 g", price: 35, oldPrice: 50, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/fd03d723-50c0-43be-bb43-e9c80467ed8a.png" },
+    { id: 12, name: "Peas", qty: "500 g", price: 55, oldPrice: 70, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/7d82028c-c189-4e8d-bff8-a31f197f5cdd.png" },
+    { id: 13, name: "Ginger", qty: "250 g", price: 30, oldPrice: 40, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/e7c9461c-4a81-46cc-8215-5f9155026a6e.png" },
+    { id: 14, name: "Garlic", qty: "250 g", price: 35, oldPrice: 50, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/4fcbc1fe-5a04-465f-9558-7ea73e9f8b1f.png" },
+    { id: 15, name: "Mushroom", qty: "200 g", price: 70, oldPrice: 90, image: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/9bc0b3fd-3aac-4f5f-a8f7-0c0b63cef1bb.png" },
   ];
 
   const handleAddClick = (itemId) => {
